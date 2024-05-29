@@ -9,7 +9,8 @@ DEPENDS += "\
             licensecheck-helper-native \
             "
 
-S = "${WORKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 inherit sca-description
 inherit_defer native

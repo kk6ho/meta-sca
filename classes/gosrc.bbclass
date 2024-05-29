@@ -5,7 +5,8 @@ inherit go
 
 HOMEPAGE ?= "https://${GO_IMPORT}"
 
-S = "${WORKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 export GO111MODULE = "auto"
 

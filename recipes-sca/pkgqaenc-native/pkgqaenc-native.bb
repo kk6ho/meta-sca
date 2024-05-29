@@ -8,7 +8,8 @@ DEPENDS += "python3-native python3-python-magic-native"
 
 SRC_URI = "file://pkgqaenc.py"
 
-S = "${WORKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 inherit sca-description
 inherit_defer native
@@ -20,7 +21,7 @@ do_compile[noexec] = "1"
 
 do_install:append() {
     install -d ${D}${bindir}
-    install -m 0755 ${WORKDIR}/pkgqaenc.py ${D}${bindir}/pkgqaenc
+    install -m 0755 ${S}/pkgqaenc.py ${D}${bindir}/pkgqaenc
 }
 
 FILES:${PN} += "${bindir}"
