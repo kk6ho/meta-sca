@@ -8,8 +8,8 @@ DEPENDS += "python3-native python3-python-magic-native"
 
 SRC_URI = "file://pkgqaenc.py"
 
-UNPACKDIR ??= "${WORKDIR}/sources"
-S = "${UNPACKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 inherit sca-description
 inherit_defer native
